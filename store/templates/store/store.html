@@ -1,0 +1,90 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        {% for x in video %}
+           <div class="col-lg-4">
+            <video class="thumbnail" controls="controls">
+                <source src="{{ x.video.url }}" type="video/mp4" />
+            </video>
+            <h3 class="text-center mt-2 mb-2">{{ x.caption }}</h3>
+           </div> 
+        {% endfor %}
+    </div>
+
+    <!-- <h3 id="names">CARs</h3>
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="thumbnail" src="{% static 'images/Prado-TXL.jpg' %}">
+            <div class="box-element product">
+                <h6><strong>TOYOTA TXR</strong></h6>
+                <hr>
+
+                <button class="btn-outline-secondary add-btn">Add to Cart</button>
+                <a class="btn btn-outline-success" href="#">View</a>
+                <h4 style="display: inline-block; float: right;"><strong>$20</strong></h4>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <img class="thumbnail" src="{% static 'images/luxury-car-hire.jpg' %}">
+            <div class="box-element product">
+                <h6><strong>Range Rover Sport</strong></h6>
+                <hr>
+
+                <button class="btn-outline-secondary add-btn">Add to Cart</button>
+                <a class="btn btn-outline-success" href="#">View</a>
+                <h4 style="display: inline-block; float: right;"><strong>$20</strong></h4>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <img class="thumbnail" src="{% static 'images/images.jpeg' %}">
+            <div class="box-element product">
+                <h6><strong>TOYOTA V8</strong></h6>
+                <hr>
+
+                <button class="btn-outline-secondary add-btn">Add to Cart</button>
+                <a class="btn btn-outline-success" href="#">View</a>
+                <h4 style="display: inline-block; float: right;"><strong>$20</strong></h4>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h3 id="names">HOUSEs</h3>
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="thumbnail" src="{% static 'images/house3.jpg' %}">
+            <div class="box-element product">
+                <h6><strong>RENTED – 3-Bedroom Luxury House in Kibagabaga for Rent Fully-Furnished</strong></h6>
+                <a class="badge badge-pill badge-light" style="border: 1px solid #212529;" href="{% url 'aboutUs' %}">House for Rent</a>
+                <hr>
+                <button class="btn-outline-secondary add-btn">Add to Cart</button>
+                <a class="btn btn-outline-success" href="#">View</a>
+                <h4 style="display: inline-block; float: right;"><strong>$2000</strong></h4>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <img class="thumbnail" src="{% static 'images/house2.jpeg' %}">
+            <div class="box-element product">
+                <h6><strong>Beautiful house for rent in Kigali nyamirambo</strong></h6>
+                <a class="badge badge-pill badge-light" style="border: 1px solid #212529;" href="#">House for Rent</a>
+                <hr>
+
+                <button class="btn-outline-secondary add-btn">Add to Cart</button>
+                <a class="btn btn-outline-success" href="#">View</a>
+                <h4 style="display: inline-block; float: right;"><strong>$600</strong></h4>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <img class="thumbnail" src="{% static 'images/house1.jpg' %}">
+            <div class="box-element product">
+                <h6><strong>House for rent in Kigali kimironko Fully-Furnished</strong></h6>
+                <a class="badge badge-pill badge-light" style="border: 1px solid #212529;" href="#">House for Rent</a>
+                <hr>
+
+                <button class="btn-outline-secondary add-btn">Add to Cart</button>
+                <a class="btn btn-outline-success" href="#">View</a>
+                <h4 style="display: inline-block; float: right;"><strong>$1000</strong></h4>
+            </div>
+        </div>
+    </div> -->
+{% endblock content %}
